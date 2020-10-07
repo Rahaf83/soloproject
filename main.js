@@ -1,4 +1,15 @@
-
+var homeTab=document.getElementById('home');
+var Tab2=document.getElementById('store');
+var Tab3=document.getElementById('cart');
+homeTab.onclick=function homePage(){
+    location.href= "home.html";
+}
+Tab2.onclick=function storePage(){
+    location.href= "#.html";
+}
+Tab3.onclick=function storePage(){
+  location.href= "#.html";
+}
 function login(){
 var username=document.getElementById('email').value;
 var password=document.getElementById('password').value;
@@ -21,28 +32,34 @@ function book(){
 	window.open("file:///C:/Users/Discovery/Desktop/soloproject/index.html");
 }
 
-// var Time=Math.abs(start.gettime()-end.gettime());
-// var dif=Math.ceil(Time/(1000*3600*24))
-var totals=0;
+ function GetDays(){
+                var start = new Date(document.getElementById("start").value);
+                var end = new Date(document.getElementById("end").value);
+                return parseInt((end-start) / (24 * 3600 * 1000));
+        }
+var days=0;
+        function cal(){
+        if(document.getElementById("start")){
+         days=GetDays();
+        }  
+    }
+
+
 var Booknow= document.getElementById("booknow");
-Booknow.onclick=function total(){
+var date1 =document.getElementById('start').value;
+var date2 = document.getElementById('end').value;
+var totals=0;
+function total(){
+var total;
 var R=document.getElementById('roomnum').value;
 var A=document.getElementById('Adults').value;
 var c=document.getElementById('children').value;
-totals=(50*R*(A+c));
+totals=((50*parseInt(R))*parseInt(A)+(25*parseInt(c))*days);
+console.log(totals);
+total=document.getElementById('Amount').innerHTML=totals;
+console.log(totals);
 confirm(totals);
-
 }
 
 
 
-// // var Time=Math.abs($("#start")-$("#end"));
-// // var dif=Math.ceil(Time/(1000*3600*24));
-// var total=0;
-// $("#book").click(function Total(){
-// var R=$('#roomnum').val();
-// var A=$('#Adults').val();
-// var c=$('#children').val();
-// total=(50*R*(A+c));
-// });
-// console.log(total);

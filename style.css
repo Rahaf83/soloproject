@@ -7,10 +7,7 @@ h1{
 	font-family: arial;
 	
 }
-#form1{
-	margin-left: 30px;
-	width: 40%;
-}
+
 #form2{
 	margin-left: 400px;
 	width: 40%;
@@ -18,23 +15,12 @@ h1{
 footer{
 	text-align: center;
 }
-#form11 .input1{ width: 235px;
-	height: 30px;
-	margin-bottom: 10px; 
-	border: none;
 
-}
-#form11 .input2{ width: 113px;
-	height: 30px;
-	margin-bottom: 10px; 
-	border: none;
-
-}
 button{
 	color: white;
 	background-color: purple;
 	border: none;
-	width: 470px;
+	width: 270px;
 	height: 30px;
 }
 .buttons button{
@@ -60,4 +46,44 @@ margin:120px;
 }
 #booknow1{
 	margin-left: 45%;
+
 }
+
+
+.booking {
+	display: flex;
+	position: relative;
+}
+
+.room-info, .payment {
+	width: 50%;
+}
+
+.room-info {
+	border-right: 1px solid rgba(0, 0, 0, .1);
+	padding-right: 30px;
+}
+
+
+.booking input {
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+	font-size: 1.2em;
+	padding: 10px;
+	transition: border .1s ease;
+	width:30%;
+}
+.room-info img{
+	width: 100%;
+}
+.booking input:focus, {
+	border-bottom: 2px solid #ff9999;
+}
+.booking select {
+	width: 215px;
+}
+.booking select {
+	width: 215px;
+}
+

@@ -16,14 +16,21 @@
 		<button id='cart'>contact</button>
 	</div>
 	<h1>Book A Room</h1>
-<div id="form1" style="margin-top: 50px">
-	<img src="Room.jpg" style="height: 300px">
-	<form id="form11">
-		<input type="text" placeholder="Username" class="input1" >
-		<input type="text" placeholder="Lastname" class="input1">
+	
+<div class="booking">
+     
+          <div class="room-info" style="text-align: center;">
+            <h1>Booking</h1>
+
+           <img src="Room.jpg" style="height: 300px">
+           <br>
+           <br>
+	<form>
+		<input type="text" placeholder="Username" >
+		<input type="text" placeholder="Lastname" >
 		<br>
-		<input type="text" placeholder="number" class="input1">
-		<select class="input1" style="height: 35px;">
+		<input type="text" placeholder="number" >
+		<select style="height: 40px;">
 			<option>--Country--</option>
 			<option>Jordan</option>
 			<option>syria</option>
@@ -31,24 +38,54 @@
 			<option>egypt</option>
 		</select>
 		<br>
-		<input type="date" class="input1" id="start">
-		<input type="date" class="input1" id="end">
+		<input type="date"  id="start"  onchange="cal()">
+		<input type="date"  id="end" onchange="cal()">
 		<br>
-		<select class="input2" id="selectroom" >
-			<option>Room type</option>
-			<option value="50" id="roomype">single</option>
-		    <option value="25" id="roomype">double</option>
+		<select style="height: 40px;">
+			<option>Roomtype</option>
+			<option>single</option>
+			<option>Double</option>
+			
 		</select>
         
-		<input type="number" placeholder="room num" class="input2" id="roomnum">
-		<input type="number" placeholder="Adults" class="input2" id="Adults">
-		<input type="number" placeholder="children" class="input2" id="children">
-
+		<input type="number" placeholder="room num"  id="roomnum">
+		<input type="number" placeholder="Adults"  id="Adults">
+		<input type="number" placeholder="children"  id="children">
 		<br>
-		<button id="booknow">Book Now!</button>
+		<br>
+		<br>
+		<button id="booknow" onclick="total()">Your Bill!</button>
 	</form>
-</div>
 
+          </div>
+
+          <div class="payment" style="text-align: center;">
+            <h1>Checkout</h1>
+            <img src="card.jpg" style="height: 300px">
+
+           <p style="color: white"> You can view your bill here </p>
+           <h3 id="Amount">Total</h3>
+
+            <form >
+ 
+              <input type="text" placeholder="Credit card number">
+
+                  <input type="text" placeholder="MM YY">
+
+                  <input type="text" placeholder="CVS Code">
+                
+              <input type="text" placeholder="Name on the card">
+            </form>
+
+             
+            
+<br>
+<br>
+<br>
+           <button id="book">Book Now!</button>
+          </div>
+        </div>
+      </div>
  <br>
  <br>
  <br>
