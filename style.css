@@ -1,6 +1,17 @@
 body{
 	background-image: url("back.jpg");
 }
+#homea{
+	background-image: url("order.jpg");
+}
+#homepic{
+	width: 600px;
+	margin-left:350px; 
+}
+#login{
+	width: 100px;
+	margin-left: 130px;
+}
 h1{
 	color: white;
 	text-align: center;

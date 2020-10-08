@@ -1,3 +1,5 @@
+console.log("connected")
+
 var homeTab=document.getElementById('home');
 var Tab2=document.getElementById('store');
 var Tab3=document.getElementById('cart');
@@ -10,7 +12,10 @@ Tab2.onclick=function storePage(){
 Tab3.onclick=function storePage(){
   location.href= "#.html";
 }
-function login(){
+
+
+var login=document.getElementById("login");
+login.onclick=function login(){
 var username=document.getElementById('email').value;
 var password=document.getElementById('password').value;
 if (username=="rahaf@yahoo.com" && password=="1234"){
@@ -45,21 +50,27 @@ var days=0;
     }
 
 
-var Booknow= document.getElementById("booknow");
-var date1 =document.getElementById('start').value;
-var date2 = document.getElementById('end').value;
 var totals=0;
 function total(){
-var total;
 var R=document.getElementById('roomnum').value;
 var A=document.getElementById('Adults').value;
 var c=document.getElementById('children').value;
 totals=((50*parseInt(R))*parseInt(A)+(25*parseInt(c))*days);
 console.log(totals);
-total=document.getElementById('Amount').innerHTML=totals;
-console.log(totals);
-confirm(totals);
+document.getElementById('Amount').innerHTML=totals
+alert(totals);
+
 }
 
 
+// var bi=document.getElementById('booknow').value;
+// bi.onclick=function show(){
+//   document.getElementById('Amount').innerHTML=totals;
+
+// }
+
+
+function enjoy(){
+    alert('Thank You we hope enjoy');
+}
 
